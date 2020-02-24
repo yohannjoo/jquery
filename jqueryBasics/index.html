@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters and Setters</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script>
+        $(document).ready(function(){
+            // var myText = $('#myParagraph').text();
+            // alert(myText);
+            $('button').click(function(){
+                $('#myParagraph').text('see how I .text() works as a stter!')
+            })
+        });
+    </script>
+</head>
+<body>
+    <p id="myParagraph">This is my paragraph!</p>
+    <button>Click me to change the paragraph!</button>
+</body>
+</html>

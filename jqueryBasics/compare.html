@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script>
+        // var btn = document.getElementById("btn");
+        // btn.addEventListener("click", function(){
+        //     var pTag = document.getElementById("first-p");
+        //     pTag.style.backgroundColor = "green";
+        // });
+        //JQUERY WAY
+        $('#btn').click(function(){
+            var pTage = $("#first-p");
+            pTag.css("backgroundColor", "green");
+        });
+    </script>
+</head>
+<body>
+    <p id="first-p">Hello Everyone!</p>
+    <button id="btn">Click Me</button>
+
+    <!--you can put javascript down here
+    <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", function(){
+            var pTag = document.getElementById("first-p");
+            pTag.style.backgroundColor = "green";
+        });
+    </script> -->
+</body>
+</html>

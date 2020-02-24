@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQeury Demo</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script>
+
+        $(document).ready(function() {
+            // alert('you are now working with jquery');
+
+            // effect methods toggle the visibility property of items
+            $('a').click(function(){
+                alert('you are now leaving the page!');
+            })
+
+            $('#hide').click(function(){
+                $('p').hide();
+            })
+
+            $('#show').click(function(){
+                $('p').show();
+            })
+
+            //maniputation methods add/change either text or html to your document
+            $('h3').hover(function(){
+                $('h2').text('go see the Space needle!');
+            });
+
+            $('.append').click(function(){
+                $('.result').append('<h4>.append adds html</h4>')
+            });
+
+            //css method
+            $('button').click(function(){
+                $('button').css('background-color', 'yellow');
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <p>This is a paragraph!!</p>
+    <p>This is also a paragraph!!</p>
+    <button id="hide">This will hide all my paragraphs!</button>
+    <button id="show">Click to show paragraphs</button>
+    <a id="mylink" href="http://www.google.com">go to Google</a>
+    <h3>Mountain View, California</h3>
+    <h2>Seattle, Washington</h2>
+    <button class="append">Click to see .append work!</button>
+    <div class='result'></div>
+</body>
+</html>

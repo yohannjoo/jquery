@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practice jquery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    
+        $(document).ready(function()
+            {
+                $('#toHide').click(function(){
+                    $('#hide-show').hide();
+                });
+
+                $('#toShow').click(function(){
+                    $('#hide-show').show();
+                });
+
+                $('#toToggle').click(function(){
+                    $('#toggle').toggle("slow",function(){});
+                });
+
+                $('#slideUp').click(function(){
+                    $('#slide').slideUp();
+                });
+                $('#slideDown').click(function(){
+                    $('#slide').slideDown();
+                });
+
+                $('#toSlideToggle').click(function(){
+                    $('#slideToggle').slideToggle();
+                });
+
+                $('#fadeOut').click(function(){
+                    $('#fade').fadeOut();
+                });
+                $('#fadeIn').click(function(){
+                    $('#fade').fadeIn();
+                });
+
+                $('#toAdd').click(function(){
+                    $('#add').addClass("red");
+                });
+                $('toRemove').click(function(){
+                    $('#add').removeClass("black");
+                });
+
+                $('toCss').click(function(){
+                    $('#css').css("background-color:red;");
+                });
+
+                $('#toBefore').click(function(){
+                    $('#before-after').before("<p> Added Before Text! </p>");
+                });
+                $('#toAfter').click(function(){
+                    $('#before-after').after("<p> Added After Text! </p>");
+                });
+
+                $('#toAppend').click(function(){
+                    $('#append-prepend').append("<strong> Added After Text!</strong>");
+                });
+                $('toPrepend').click(function(){
+                    $('append-prepend').prepend("<b> Added Before Text!</b>");
+                });
+
+                $('#toATTR').click(function(){
+                    $('a').attr("facebook.com");
+                });
+
+                $('#toHTML').click(function(){
+                    $('#html').html("<p> All new content. <em>You Bet!</em></p>");
+                });
+
+                $('#toVal').click(function(){
+                    $('input:text').val("Johann Joo");
+                });
+
+                $("toText").click(function(){
+                    $('texting'),text("Johann Joo")
+                })
+        });
+
+    </script>
+    <style>
+            .red
+            {
+                color: red;
+            }
+    </style>
+</head>
+<body>
+    <div class="col text-center" style="border-bottom:1px solid black;">
+        <h1>Hide and Show</h1>
+        <button id="toHide">Hide</button>
+        <button id="toShow">Show</button>
+        <br>
+        <p id="hide-show">Be able to hide and show this text</p>
+    </div>
+    <div class="col text-center" style="border-bottom: 1px solid black;">
+        <h1> Toggle</h1>
+        <button id = "toToggle"> Toggle</button>
+        <br>
+        <p id = "toggle">Be able to toggle this text</p>
+    </div>
+    <div class="col text-center" style="border-bottom: 1px solid black;">
+        <h1>Slide up and down</h1>
+        <button id="slideUp">Slide Up</button>
+        <button id="slideDown">Slide Down</button>
+        <br>
+        <p id="slide">Slide this text up and down</p>
+    </div>
+    <div class ="col text-center" style="border-bottom: 1px solid black;">
+        <h1> Slide Toggle </h1>
+        <button id = "toSlideToggle"> Slide Toggle</button>
+        <br>
+        <p id = "slideToggle">Be able to slide toggle this text</p>
+    </div>
+    <div class="col text-center" style="border-bottom: 1px solid black;">
+        <h1>Fade in and Fade out</h1>
+        <button id="fadeOut">Fade Out</button>
+        <button id="fadeIn">Fade In</button>
+        <br>
+        <p id="fade">Be able to fade out and in this text</p>
+    </div>
+    <div class="col text-center" style="border-bottom: 1px solid black;" >
+        <h1> Add Class</h1>
+        <button id = "toAdd">Add Class</button>
+        <button id="toRemove">Remove Class</button>
+        <br>
+        <p id = "add">This will change paragraph color</p>
+    </div>
+    <div class="col text-center" style="border-bottom: 1px solid black;">
+        <h1>Add CSS</h1>
+        <button id="toCss">Add CSS</button>
+        <br>
+        <p id="css">CSS will change</p>
+    </div>
+    <div class="col text-center" style="border-bottom: 1px solid black;">
+        <h1> Before And After</h1>
+        <button id = "toBefore"> Add Before</button>
+        <button id = "toAfter"> Add After</button>
+        <p id = "before-after"> Words will be inserted BEFORE or AFTER this text</p>
+        <br>
+    </div>
+    <div class="col text-center" style="border-bottom: 1px solid black;">
+        <h1> Append and Prepend</h1>
+        <button id = "toAppend"> Append</button>
+        <button id = "toPrepend">Prepend</button>
+        <p id = "append-prepend"> Words will be appended or prepended</p>
+        <hr>
+    </div>
+    <div class="col text-center" style="border-bottom: 1px solid black;">
+        <h1>ATTR</h1>
+        <button id="toATTR">ATTR</button>
+        <a href="www.google.com">google.com</a>
+        <br>
+    </div>
+    <div class="col text-center" style="border-bottom: 1px solid black;">
+        <h1>HTML</h1>
+        <button id="toHTML">HTML</button>
+        <br>
+        <p id="html">New worlds will appear</p>
+    </div>
+    <div class="col text-center" style="border-bottom: 1px solid black;"></div>
+        <button id="toVal">VAL</button>
+        <input type="text" name="" id="">
+    </div>
+    <div class="col text-center" style="border-bottom: 1px solid black;">
+        <h1>Text</h1>
+        <button id="toText">TEXT</button>
+        <p id="texting">Click Text</p>
+    </div>
+</body>
+</html>
